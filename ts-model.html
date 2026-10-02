@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TS Model — Bernico</title>
+<meta name="description" content="Built for one thing. Racing. Handcrafted in composite at Willebroek, Belgium.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/logo.png.png">
+<link rel="stylesheet" href="css/ferrari.css">
+<script>
+/* Opener gate — must run in <head>, before the body paints, so that on every
+   page after the first the loading screen is never even briefly visible.
+   Default: once per visit (sessionStorage). Change to localStorage below to
+   show it only once, ever, per browser. Add ?opener=1 to any URL to force it. */
+(function () {
+  try {
+    // Force it, for previewing. The hash form also survives hosts that strip
+    // query strings on clean-URL redirects (e.g. `npx serve`).
+    if (location.search.indexOf("opener=1") > -1) return;
+    if (location.hash === "#opener") return;
+    var store = window.sessionStorage;                       // <- localStorage = once ever
+    if (store.getItem("bernico.opener")) {
+      document.documentElement.className += " no-opener";
+    } else {
+      store.setItem("bernico.opener", "1");
+    }
+  } catch (e) { /* storage blocked (private mode) — just show it */ }
+})();
+</script>
+</head>
+<body>
+<!-- opener -->
+<div class="op" id="op" aria-hidden="true">
+  <span class="op__curt op__curt--t"></span>
+  <span class="op__curt op__curt--b"></span>
+  <div class="op__in">
+    <img class="op__logo" src="assets/logo.png.png" alt="Bernico">
+    <span class="op__bar"><i></i></span>
+  </div>
+</div>
+
+<div class="prog" aria-hidden="true"><i id="prog"></i></div>
+
+<!-- header -->
+<header class="hd" id="hd">
+  <div class="hd__in">
+    <a href="index.html" aria-label="Bernico — home"><img class="hd__logo" src="assets/logo.png.png" alt="Bernico"></a>
+
+    <nav class="hd__nav" aria-label="Primary">
+      <a class="hd__a" data-page="racing" href="racing.html">Racing</a>
+      <a class="hd__a" data-page="leisure" href="leisure.html">Leisure</a>
+      <a class="hd__a" data-page="models" href="models.html">All boats</a>
+      <a class="hd__a" data-page="used-boats" href="used-boats.html">Pre-owned</a>
+      <a class="hd__a" data-page="news" href="news.html">News</a>
+    </nav>
+
+    <span class="hd__sp"></span>
+
+    <div class="hd__act">
+      <a class="hd__b" href="contact.html">Contact</a>
+      <button class="brg hd__ico" id="brg" type="button" aria-expanded="false" aria-controls="mnu" aria-label="Menu" style="width:auto;padding:0 4px">
+        <span class="brg__b" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- menu -->
+<div class="mnu__scrim" id="mnuScrim" aria-hidden="true"></div>
+<div class="mnu" id="mnu" aria-hidden="true">
+  <div class="wrap wrap--wide">
+    <div class="mnu__in">
+
+      <div>
+        <div class="mnu__h">Racing</div>
+        <div class="mnu__l">
+          <a href="racing.html" data-f="1" data-page="racing">All racing boats</a>
+          <a href="f1-xtreme.html" data-f="2" data-page="f1-xtreme">F1 Xtreme</a>
+          <a href="f2-xtreme.html" data-f="3" data-page="f2-xtreme">F2 Xtreme</a>
+          <a href="ts-model.html" data-f="4" data-page="ts-model">TS Model</a>
+          <a href="ftx-27-r.html" data-f="5" data-page="ftx-27-r">FTX 27 R</a>
+          <a href="43-leverage.html" data-f="6" data-page="43-leverage">43 Leverage</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="mnu__h">Leisure — rigid</div>
+        <div class="mnu__l">
+          <a href="leisure.html#rigid" data-f="7" data-page="leisure">All rigid hulls</a>
+          <a href="f2-xtreme.html" data-f="3">F2 Xtreme</a>
+          <a href="f1-xtreme.html" data-f="2">F1 Xtreme</a>
+          <a href="ftx-27.html" data-f="8" data-page="ftx-27">FTX 27</a>
+          <a href="vc-35.html" data-f="9" data-page="vc-35">VC 35</a>
+          <a href="43-leverage.html" data-f="6">43 Leverage</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="mnu__h">Leisure — RIBs</div>
+        <div class="mnu__l">
+          <a href="leisure.html#ribs" data-f="10">All RIBs</a>
+          <a href="rib-7.html" data-f="10" data-page="rib-7">7</a>
+          <a href="rib-7-6.html" data-f="11" data-page="rib-7-6">7.6</a>
+          <a href="rib-8.html" data-f="12" data-page="rib-8">8</a>
+          <a href="rx10.html" data-f="13" data-page="rx10">RX10</a>
+          <a href="rxp14.html" data-f="14" data-page="rxp14">RXP14</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="mnu__h">Bernico</div>
+        <div class="mnu__l">
+          <a href="index.html" data-f="0" data-page="index">Home</a>
+          <a href="models.html" data-f="1" data-page="models">All boats</a>
+          <a href="used-boats.html" data-f="15" data-page="used-boats">Pre-owned</a>
+          <a href="services.html" data-f="16" data-page="services">Services</a>
+          <a href="news.html" data-f="17" data-page="news">News</a>
+          <a href="ticket.html" data-f="17" data-page="ticket">boot Düsseldorf 2026</a>
+          <a href="contact.html" data-f="18" data-page="contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="mnu__f" aria-hidden="true">
+        <img class="on" src="assets/mainboat.jpg" alt="" data-name="Bernico" data-sub="Willebroek · Belgium">
+        <img src="assets/b1.jpg" alt="" data-name="Racing" data-sub="Five competition hulls">
+        <img src="assets/b1.jpg" alt="" data-name="F1 Xtreme" data-sub="Racing · leisure rigid">
+        <img src="assets/b3.jpg" alt="" data-name="F2 Xtreme" data-sub="Racing · leisure rigid">
+        <img src="assets/next-3.jpg" alt="" data-name="TS Model" data-sub="Competition only">
+        <img src="assets/b5.jpg" alt="" data-name="FTX 27 R" data-sub="Racing">
+        <img src="assets/b7.png" alt="" data-name="43 Leverage" data-sub="43 ft · race or leisure">
+        <img src="assets/b6.jpg" alt="" data-name="Rigid hulls" data-sub="Five leisure boats">
+        <img src="assets/b6.jpg" alt="" data-name="FTX 27" data-sub="Leisure rigid · 27 ft">
+        <img src="assets/next-1.jpg" alt="" data-name="VC 35" data-sub="Leisure rigid · 35 ft">
+        <img src="assets/r7-hero.jpg" alt="" data-name="7" data-sub="RIB · 7.46 m">
+        <img src="assets/b4.jpg" alt="" data-name="7.6" data-sub="RIB · 7.6 m">
+        <img src="assets/b8.jpg" alt="" data-name="8" data-sub="RIB · 8 m">
+        <img src="assets/b2.jpg" alt="" data-name="RX10" data-sub="Offshore RIB">
+        <img src="assets/adv-3.jpg" alt="" data-name="RXP14" data-sub="Flagship RIB · 14 m">
+        <img src="assets/Used/used-hero.jpg" alt="" data-name="Pre-owned" data-sub="Inspected · serviced">
+        <img src="assets/service-1.jpg" alt="" data-name="Services" data-sub="Five ways we look after her">
+        <img src="assets/news-boot.png" alt="" data-name="News" data-sub="boot Düsseldorf 2026">
+        <img src="assets/charter-big.jpg" alt="" data-name="Contact" data-sub="Willebroek, Belgium">
+        <div class="mnu__f-cap">
+          <div class="t-h3" id="mnuFName">Bernico</div>
+          <div class="t-lbl" id="mnuFSub" style="opacity:.8;margin-top:3px">Willebroek · Belgium</div>
+        </div>
+      </div>
+
+      <div class="mnu__ft">
+        <div class="t-small">
+          Lebacol Composite Company BVBA · Victor Dumonlaan 6, 2830 Willebroek, Belgium ·
+          <a href="mailto:info@bernico.be" style="text-decoration:underline;text-underline-offset:3px">info@bernico.be</a>
+        </div>
+        <div class="mnu__soc">
+          <a href="https://www.instagram.com/bernicocustomboats/?hl=en" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.71-2.13 1.38C1.34 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.71 1.46 1.38 2.13.67.67 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.71 2.13-1.38.67-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.71-1.46-1.38-2.13C21.32 1.34 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg></a>
+          <a href="https://be.linkedin.com/company/bernico-boats" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 2.06-2.07 2.06 2.06 0 0 1-2.06 2.07M7.12 20.45H3.56V9h3.56zM22.22 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54A1.75 1.75 0 0 0 1.77 24h20.45A1.76 1.76 0 0 0 24 22.27V1.73A1.76 1.76 0 0 0 22.22 0"/></svg></a>
+          <a href="https://www.facebook.com/p/Bernico-Powerboats-100057690690176/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<main>
+
+<section class="cov" id="cov" style="height:88svh">
+  <article class="cov__s on px-wrap">
+    <img class="px" data-px="0.12" src="assets/next-3.jpg" alt="Bernico TS Model">
+  </article>
+  <div class="cov__scrim" aria-hidden="true"></div>
+  <div class="cov__c">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> — <a href="racing.html">Racing</a> — TS Model</nav>
+    <div class="t-kicker cov__k">Racing</div>
+    <h1 class="t-hero cov__t">TS Model</h1>
+    <p class="cov__d">Built for one thing.</p>
+    <div class="cov__cta">
+      <a class="b b--light-fill" href="contact.html">Enquire</a>
+      <a class="b b--light" href="#specs">Specifications</a>
+    </div>
+    <div class="facts mt3">
+        <div class="facts__i"><span class="facts__k">Class</span><span class="facts__v t-num">Racing</span></div>
+        <div class="facts__i"><span class="facts__k">Build</span><span class="facts__v t-num">All composite</span></div>
+        <div class="facts__i"><span class="facts__k">Use</span><span class="facts__v t-num">Competition</span></div>
+    </div>
+  </div>
+  <a class="cov__scroll" href="#intro"><i aria-hidden="true"></i>Scroll</a>
+</section>
+
+<!-- Intro -->
+<section class="sec" id="intro">
+  <div class="wrap wrap--tight" style="text-align:center">
+    <div class="t-lbl" style="color:var(--ink-3)" data-r="fade">Racing</div>
+    <h2 class="t-h2 mt2" data-r style="--i:1">Built for one thing.</h2>
+    <p class="t-body mt3" data-r style="--i:2;margin-inline:auto">The TS is a pure competition boat. There is no leisure version and no attempt at one. Every decision in it — layout, weight, rigging, where the crew sits — is made against a stopwatch.</p>
+  </div>
+</section>
+
+<!-- Sticky feature scroll -->
+<section class="sec sec--grey">
+  <div class="wrap wrap--wide">
+    <div class="stick">
+      <div class="stick__m">
+        <div class="px-wrap"><img class="px" data-px="0.08" src="assets/performance.jpg" alt="TS Model detail"></div>
+      </div>
+      <div class="stick__l">
+      <div class="stick__i" data-r style="--i:0">
+        <div class="stick__n t-num">01</div>
+        <div class="t-h3 ft__t">Weight where it earns its place</div>
+        <p class="ft__p">Structure is put where load goes and removed everywhere else. The result is a boat that changes direction when asked rather than when persuaded.</p>
+      </div>
+      <div class="stick__i" data-r style="--i:1">
+        <div class="stick__n t-num">02</div>
+        <div class="t-h3 ft__t">Crew position first</div>
+        <p class="ft__p">The cockpit is built around the driver and throttleman, not fitted around a deck mould that already existed.</p>
+      </div>
+      <div class="stick__i" data-r style="--i:2">
+        <div class="stick__n t-num">03</div>
+        <div class="t-h3 ft__t">Set up per event</div>
+        <p class="ft__p">Rigging, trim and propeller selection are specified for the course, not delivered as a compromise that suits none of them.</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Plate -->
+<section class="plate px-wrap">
+  <img class="px" data-px="0.16" src="assets/b8.jpg" alt="Bernico TS Model">
+</section>
+
+<!-- Specifications -->
+<section class="sec sec--dark" id="specs">
+  <div class="wrap wrap--wide">
+    <div class="bh">
+      <div>
+        <div class="t-lbl bh__lbl" data-r="fade">Technical</div>
+        <h2 class="t-h2 bh__t" data-r style="--i:1">Specifications</h2>
+      </div>
+    </div>
+    <div data-r>
+      <div class="spec2 tog-panel">
+      <div class="spec">
+        <div class="spec__r"><span class="spec__k">Length</span><span class="spec__v t-num">—</span></div>
+        <div class="spec__r"><span class="spec__k">Beam</span><span class="spec__v t-num">—</span></div>
+        <div class="spec__r"><span class="spec__k">Dry weight</span><span class="spec__v t-num">—</span></div>
+        <div class="spec__r"><span class="spec__k">Engine</span><span class="spec__v t-num">—</span></div>
+      </div>
+      <div class="spec">
+        <div class="spec__r"><span class="spec__k">Crew</span><span class="spec__v t-num">2</span></div>
+        <div class="spec__r"><span class="spec__k">Construction</span><span class="spec__v t-num">All composite</span></div>
+        <div class="spec__r"><span class="spec__k">Concept</span><span class="spec__v t-num">Competition</span></div>
+        <div class="spec__r"><span class="spec__k">Builder</span><span class="spec__v t-num">Bernico</span></div>
+      </div>
+      </div>
+      <p class="t-small mt3">Provisional specification — figures to be confirmed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Related -->
+<section class="sec--sm" data-rail>
+  <div class="wrap wrap--wide">
+    <div class="bh">
+      <div>
+        <div class="t-lbl bh__lbl" data-r="fade">Also consider</div>
+        <h2 class="t-h2 bh__t" data-r style="--i:1">Close to this one</h2>
+      </div>
+      <div class="rail__ctl" data-r style="--i:2">
+        <button class="rnd rail__p" type="button" aria-label="Scroll left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="rnd rail__n" type="button" aria-label="Scroll right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="rail">
+    <div class="rail__t">
+      <a class="card card--model card--w" href="f1-xtreme.html">
+        <div class="card__m px-wrap"><img class="px" data-px="0.05" src="assets/models/f1-xtreme/13.jpg" alt="F1 Xtreme"></div>
+        <div class="card__b">
+          <div class="t-lbl card__k">Racing · Leisure rigid</div>
+          <div class="t-h3 card__t">F1 Xtreme</div>
+          <p class="card__d">The sharpest hull we build, offered in race trim and in leisure trim.</p>
+        </div>
+      </a>
+      <a class="card card--model card--w" href="f2-xtreme.html">
+        <div class="card__m px-wrap"><img class="px" data-px="0.05" src="assets/b3.jpg" alt="F2 Xtreme"></div>
+        <div class="card__b">
+          <div class="t-lbl card__k">Racing · Leisure rigid</div>
+          <div class="t-h3 card__t">F2 Xtreme</div>
+          <p class="card__d">The same discipline as the F1, in a hull built to be driven more often.</p>
+        </div>
+      </a>
+      <a class="card card--model card--w" href="ftx-27-r.html">
+        <div class="card__m px-wrap"><img class="px" data-px="0.05" src="assets/b5.jpg" alt="FTX 27 R"></div>
+        <div class="card__b">
+          <div class="t-lbl card__k">Racing</div>
+          <div class="t-h3 card__t">FTX 27 R</div>
+          <p class="card__d">The FTX 27, taken to the course.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bnr bnr--flip">
+  <div class="bnr__m px-wrap"><img class="px" data-px="0.09" src="assets/next-3.jpg" alt="Bernico TS Model"></div>
+  <div class="bnr__c" data-px="-0.03">
+    <div class="t-lbl bnr__k" data-r="fade">Next step</div>
+    <h2 class="t-h2 bnr__t" data-r style="--i:1">Build your TS Model</h2>
+    <p class="t-body bnr__p" data-r style="--i:2">
+      Every Bernico is built to order at Willebroek. Tell our team how you use the water
+      and we will specify the boat around it.
+    </p>
+    <div class="bnr__cta" data-r style="--i:3">
+      <a class="b b--fill" href="contact.html">Enquire</a>
+      <a class="b" href="racing.html">All racing boats</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="ft">
+  <div class="wrap wrap--wide">
+
+    <div class="ft__top ft__top--5">
+      <div>
+        <img class="ft__logo" src="assets/logo.png.png" alt="Bernico">
+        <p class="ft__tag">
+          Handcrafted powerboats, built in composite at Willebroek. Available in 26, 32 and 48 feet.
+        </p>
+      </div>
+
+      <div>
+        <div class="ft__h">Racing</div>
+        <div class="ft__l">
+          <a href="f1-xtreme.html">F1 Xtreme</a>
+          <a href="f2-xtreme.html">F2 Xtreme</a>
+          <a href="ts-model.html">TS Model</a>
+          <a href="ftx-27-r.html">FTX 27 R</a>
+          <a href="43-leverage.html">43 Leverage</a>
+          <a href="racing.html">All racing boats</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="ft__h">Leisure</div>
+        <div class="ft__l">
+          <a href="ftx-27.html">FTX 27</a>
+          <a href="vc-35.html">VC 35</a>
+          <a href="rib-7.html">RIB 7</a>
+          <a href="rib-7-6.html">RIB 7.6</a>
+          <a href="rib-8.html">RIB 8</a>
+          <a href="rx10.html">RX10</a>
+          <a href="rxp14.html">RXP14</a>
+          <a href="leisure.html">All leisure boats</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="ft__h">Ownership</div>
+        <div class="ft__l">
+          <a href="used-boats.html">Pre-owned</a>
+          <a href="services.html#charter">Charter service</a>
+          <a href="services.html#management">Yacht management</a>
+          <a href="services.html#support">24/7 support</a>
+          <a href="services.html#delivery">Global deliveries</a>
+          <a href="news.html">News</a>
+          <a href="ticket.html">boot Düsseldorf 2026</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="ft__h">Contact</div>
+        <p class="ft__txt">
+          Lebacol Composite Company BVBA<br>
+          Victor Dumonlaan 6<br>
+          2830 Willebroek, Belgium
+        </p>
+        <p class="ft__txt" style="margin-top:12px">
+          <a href="mailto:info@bernico.be" style="text-decoration:underline;text-underline-offset:3px">info@bernico.be</a><br>
+          <a href="tel:+3234558728">+32 (0)3 455 87 28</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="ft__mid">
+      <div>
+        <div class="ft__nt">Newsletter</div>
+        <div class="ft__ns">Launches, shows and build news from the yard.</div>
+      </div>
+      <form class="ft__form" data-form>
+        <input type="email" name="email" placeholder="E-mail address" required aria-label="E-mail address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="ft__bot">
+      <div class="ft__cp">© 2026 Bernico. All rights reserved.</div>
+      <div class="ft__lg">
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Cookie policy</a>
+        <a href="#">Terms &amp; conditions</a>
+      </div>
+      <div class="ft__soc">
+        <a href="https://www.instagram.com/bernicocustomboats/?hl=en" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.71-2.13 1.38C1.34 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.71 1.46 1.38 2.13.67.67 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.71 2.13-1.38.67-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.71-1.46-1.38-2.13C21.32 1.34 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg></a>
+        <a href="https://be.linkedin.com/company/bernico-boats" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 2.06-2.07 2.06 2.06 0 0 1-2.06 2.07M7.12 20.45H3.56V9h3.56zM22.22 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54A1.75 1.75 0 0 0 1.77 24h20.45A1.76 1.76 0 0 0 24 22.27V1.73A1.76 1.76 0 0 0 22.22 0"/></svg></a>
+        <a href="https://www.facebook.com/p/Bernico-Powerboats-100057690690176/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07"/></svg></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<button class="top" id="top" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="js/ferrari.js"></script>
+</body>
+</html>

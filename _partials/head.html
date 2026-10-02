@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/logo.png.png">
+<link rel="stylesheet" href="css/ferrari.css">
+<script>
+/* Opener gate — must run in <head>, before the body paints, so that on every
+   page after the first the loading screen is never even briefly visible.
+   Default: once per visit (sessionStorage). Change to localStorage below to
+   show it only once, ever, per browser. Add ?opener=1 to any URL to force it. */
+(function () {
+  try {
+    // Force it, for previewing. The hash form also survives hosts that strip
+    // query strings on clean-URL redirects (e.g. `npx serve`).
+    if (location.search.indexOf("opener=1") > -1) return;
+    if (location.hash === "#opener") return;
+    var store = window.sessionStorage;                       // <- localStorage = once ever
+    if (store.getItem("bernico.opener")) {
+      document.documentElement.className += " no-opener";
+    } else {
+      store.setItem("bernico.opener", "1");
+    }
+  } catch (e) { /* storage blocked (private mode) — just show it */ }
+})();
+</script>
+</head>
+<body>
