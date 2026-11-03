@@ -882,3 +882,20 @@ input,select,textarea{
 /* Opener suppressed after the first page of a visit. The class is set by an
    inline <head> script, so this applies before the body paints — no flash. */
 html.no-opener .op{display:none!important;}
+
+/* ==========================================================================
+   29. OPENER — brand flash, not a loader
+   Total ~1.4s: logo in, brief hold, curtains part. The progress bar is gone;
+   a filling bar is what makes an entrance read as "loading".
+   ========================================================================== */
+.op__logo{animation:opL .45s var(--e) forwards;}
+.op__bar{display:none;}
+
+.op.out .op__in{
+  opacity:0;
+  transform:translateY(-4px);
+  transition:opacity .25s ease,transform .35s var(--e);
+}
+.op__curt{transition:transform .45s var(--e2);}
+.op.out .op__curt{transition:transform .45s var(--e2) .12s;}
+.op.done{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .15s .45s,visibility 0s .6s;}

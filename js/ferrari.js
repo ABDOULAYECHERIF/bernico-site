@@ -25,11 +25,10 @@
 
     doc.documentElement.classList.add("lock");
 
-    // Measured from script start, NOT from the load event — otherwise a slow
-    // image or video pushes the whole opener out and it just reads as a long
-    // black screen. The logo is on screen for essentially all of this.
-    var MIN = reduced ? 150 : 3000;
-    var t0 = performance.now();
+    // A brand flash, not a loader. Deliberately a short fixed timer that never
+    // waits on window.load — waiting on assets is what made this feel like a
+    // long loading screen. Images and video keep downloading behind the page.
+    var HOLD = reduced ? 100 : 850;
     var closed = false;
 
     function close() {
@@ -40,16 +39,10 @@
         op.classList.add("done");
         doc.documentElement.classList.remove("lock");
         scan();
-      }, reduced ? 40 : 1250);   // logo fade (.42s) + curtain delay (.3s) + travel (.95s)
+      }, reduced ? 30 : 560);   // logo fade .25s + curtain delay .12s + travel .45s
     }
 
-    function ready() {
-      setTimeout(close, Math.max(0, MIN - (performance.now() - t0)));
-    }
-
-    if (doc.readyState === "complete") ready();
-    else window.addEventListener("load", ready);
-    setTimeout(close, MIN + 2500);   // hard cap — never trap the page
+    setTimeout(close, HOLD);   // ~1.4s door to door
   }
 
   /* ------------------------------------------------------------- HEADER */
