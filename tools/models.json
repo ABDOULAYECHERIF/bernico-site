@@ -1,39 +1,43 @@
 {
   "_note": "Edit this file, then run: node tools/gen.js --force && bash build.sh",
-  "_specs": "Every spec marked provisional:true prints a 'provisional' line on the page. Set it to false once real figures are in.",
+  "_range": "The range as given by Nico Bertels on 3 Nov 2026. Racing: F3 Xtreme, VC35 R, P1 Racing, F1TS, F1 & F2 Circuit (coming soon). Leisure rigid: F3, F2, F1, CCX, GTS, FTX S, FTX B, FTX 33 (coming soon), Leverage, Leverage Quad, VC35. RIB: R7, RX8 (render), RX10, RX10 X, RXP 11, RXP13, RXP14, B52, B60 (render).",
+  "_dual": "F3 / F3 Xtreme, VC35 / VC35 R and Leverage / P1 Racing are one hull in two trims, so each has one page with a trim toggle. racingName holds the competition name. TO CONFIRM WITH THE CLIENT.",
+  "_legacy": "FTX 27, FTX 27 R, 7.6 and 8 are no longer in the current lists. They are kept as legacy pages so nothing 404s. TO CONFIRM WITH THE CLIENT.",
+  "_specs": "Only the R7 carries confirmed figures. Every other model is provisional:true and prints a to-be-confirmed line.",
+  "_photos": "img.placeholder:true means the photography is a stand-in from the original project, not this boat. Real client photography exists only for F1 (assets/models/f1-xtreme), Leverage (assets/models/43-leverage) and RX10 (assets/models/rx10).",
+  "_rights": "assets/models/43-leverage/04.jpg came from a Facebook export in the client Drive; a sibling frame from the same shoot carried a visible (c) Raffaello Bastiani watermark and was quarantined. Clear rights before publishing.",
   "models": [
     {
-      "slug": "f1-xtreme",
-      "name": "F1 Xtreme",
+      "slug": "f1",
+      "name": "F1",
       "families": [
-        "racing",
         "rigid"
       ],
-      "kicker": "Racing · Leisure rigid",
-      "tagline": "The sharpest hull we build, offered in race trim and in leisure trim.",
-      "intro": "The F1 Xtreme is the point of the range. A deep-V racing hull built entirely in composite, set up for competition and then re-trimmed, seat by seat, for owners who want that hull on a Sunday. Nothing about the running surface changes between the two — only what sits on top of it.",
+      "kicker": "Leisure · Rigid hull",
+      "tagline": "The sharpest hull we build, trimmed for the water you actually use.",
+      "intro": "The F1 is the point of the range. A deep-V hull built entirely in composite, drawn from competition practice and then trimmed, seat by seat, for owners who want that hull on a Sunday. Nothing about the running surface is softened — only what sits on top of it.",
       "facts": [
         {
-          "k": "Class",
-          "v": "Xtreme"
+          "k": "Family",
+          "v": "F-series"
         },
         {
           "k": "Build",
           "v": "All composite"
         },
         {
-          "k": "Trim",
-          "v": "Race / leisure"
+          "k": "Hull",
+          "v": "Deep-V"
         }
       ],
       "features": [
         {
           "t": "Competition deep-V",
-          "p": "The hull is the constant. A fine entry and a hard-run aft section that stays planted through chop at speed, without the slamming that usually comes with that much deadrise."
+          "p": "A fine entry and a hard-run aft section that stays planted through chop at speed, without the slamming that usually comes with that much deadrise."
         },
         {
-          "t": "Two trims, one running surface",
-          "p": "Race trim strips weight and adds restraint systems. Leisure trim adds upholstered seating, storage and finish. The performance you feel underneath is the same."
+          "t": "Finished for use",
+          "p": "Upholstered seating, storage and a finished cockpit, laid over a hull that was never softened to accommodate them."
         },
         {
           "t": "Composite throughout",
@@ -41,7 +45,7 @@
         }
       ],
       "specs": {
-        "racing": [
+        "single": [
           {
             "k": "Length",
             "v": "—"
@@ -56,33 +60,7 @@
           },
           {
             "k": "Engine",
-            "v": "Twin outboard"
-          },
-          {
-            "k": "Crew",
-            "v": "2"
-          },
-          {
-            "k": "Construction",
-            "v": "All composite"
-          }
-        ],
-        "leisure": [
-          {
-            "k": "Length",
             "v": "—"
-          },
-          {
-            "k": "Beam",
-            "v": "—"
-          },
-          {
-            "k": "Dry weight",
-            "v": "—"
-          },
-          {
-            "k": "Engine",
-            "v": "Single / twin outboard"
           },
           {
             "k": "Capacity",
@@ -90,7 +68,7 @@
           },
           {
             "k": "Construction",
-            "v": "All composite"
+            "v": "—"
           }
         ]
       },
@@ -101,51 +79,46 @@
         "plate": "assets/models/f1-xtreme/06.jpg"
       },
       "related": [
-        "f2-xtreme",
-        "ftx-27-r",
-        "43-leverage"
+        "f2",
+        "f3",
+        "leverage"
       ]
     },
     {
-      "slug": "f2-xtreme",
-      "name": "F2 Xtreme",
+      "slug": "f2",
+      "name": "F2",
       "families": [
-        "racing",
         "rigid"
       ],
-      "kicker": "Racing · Leisure rigid",
+      "kicker": "Leisure · Rigid hull",
       "tagline": "The same discipline as the F1, in a hull built to be driven more often.",
-      "intro": "The F2 Xtreme takes the Xtreme running surface and gives it a little more forgiveness. It races, and it also does the thing an F1 will not — long days, more people, less ceremony. For most owners this is the one that gets used.",
+      "intro": "The F2 sits below the F1 and is the one most owners end up on. Same composite construction, same approach to the running surface, in a size that is easier to keep, easier to launch and easier to use on an ordinary afternoon.",
       "facts": [
         {
-          "k": "Class",
-          "v": "Xtreme"
+          "k": "Family",
+          "v": "F-series"
         },
         {
           "k": "Build",
           "v": "All composite"
         },
         {
-          "k": "Trim",
-          "v": "Race / leisure"
+          "k": "Hull",
+          "v": "Deep-V"
         }
       ],
       "features": [
         {
-          "t": "Broader working range",
-          "p": "Trimmed to stay comfortable across a wider band of speed and sea state, rather than being sharpest at one narrow point of it."
+          "t": "Easier to live with",
+          "p": "Smaller than the F1 and lighter on fuel and berth, without changing how the hull behaves when you open it up."
         },
         {
-          "t": "Deck laid out for people",
-          "p": "In leisure trim the cockpit is arranged around movement — boarding, sitting, standing at the helm — without softening the boat underneath."
-        },
-        {
-          "t": "Race-ready when asked",
-          "p": "The same hull is delivered in competition specification, with the seating, restraint and rigging changes that go with it."
+          "t": "One running surface",
+          "p": "The hull is not a softened version of anything. It is the F-series surface at a different length."
         }
       ],
       "specs": {
-        "racing": [
+        "single": [
           {
             "k": "Length",
             "v": "—"
@@ -160,33 +133,7 @@
           },
           {
             "k": "Engine",
-            "v": "Twin outboard"
-          },
-          {
-            "k": "Crew",
-            "v": "2"
-          },
-          {
-            "k": "Construction",
-            "v": "All composite"
-          }
-        ],
-        "leisure": [
-          {
-            "k": "Length",
             "v": "—"
-          },
-          {
-            "k": "Beam",
-            "v": "—"
-          },
-          {
-            "k": "Dry weight",
-            "v": "—"
-          },
-          {
-            "k": "Engine",
-            "v": "Single / twin outboard"
           },
           {
             "k": "Capacity",
@@ -194,7 +141,7 @@
           },
           {
             "k": "Construction",
-            "v": "All composite"
+            "v": "—"
           }
         ]
       },
@@ -202,253 +149,55 @@
       "img": {
         "hero": "assets/b3.jpg",
         "stick": "assets/next-2.jpg",
-        "plate": "assets/b5.jpg"
+        "plate": "assets/b5.jpg",
+        "placeholder": true
       },
       "related": [
-        "f1-xtreme",
-        "ftx-27",
-        "43-leverage"
+        "f1",
+        "f3",
+        "ccx"
       ]
     },
     {
-      "slug": "ts-model",
-      "name": "TS Model",
-      "families": [
-        "racing"
-      ],
-      "kicker": "Racing",
-      "tagline": "Built for one thing.",
-      "intro": "The TS is a pure competition boat. There is no leisure version and no attempt at one. Every decision in it — layout, weight, rigging, where the crew sits — is made against a stopwatch.",
-      "facts": [
-        {
-          "k": "Class",
-          "v": "Racing"
-        },
-        {
-          "k": "Build",
-          "v": "All composite"
-        },
-        {
-          "k": "Use",
-          "v": "Competition"
-        }
-      ],
-      "features": [
-        {
-          "t": "Weight where it earns its place",
-          "p": "Structure is put where load goes and removed everywhere else. The result is a boat that changes direction when asked rather than when persuaded."
-        },
-        {
-          "t": "Crew position first",
-          "p": "The cockpit is built around the driver and throttleman, not fitted around a deck mould that already existed."
-        },
-        {
-          "t": "Set up per event",
-          "p": "Rigging, trim and propeller selection are specified for the course, not delivered as a compromise that suits none of them."
-        }
-      ],
-      "specs": {
-        "single": [
-          {
-            "k": "Length",
-            "v": "—"
-          },
-          {
-            "k": "Beam",
-            "v": "—"
-          },
-          {
-            "k": "Dry weight",
-            "v": "—"
-          },
-          {
-            "k": "Engine",
-            "v": "—"
-          },
-          {
-            "k": "Crew",
-            "v": "2"
-          },
-          {
-            "k": "Construction",
-            "v": "All composite"
-          },
-          {
-            "k": "Concept",
-            "v": "Competition"
-          },
-          {
-            "k": "Builder",
-            "v": "Bernico"
-          }
-        ]
-      },
-      "provisional": true,
-      "img": {
-        "hero": "assets/next-3.jpg",
-        "stick": "assets/performance.jpg",
-        "plate": "assets/b8.jpg"
-      },
-      "related": [
-        "f1-xtreme",
-        "f2-xtreme",
-        "ftx-27-r"
-      ]
-    },
-    {
-      "slug": "ftx-27-r",
-      "name": "FTX 27 R",
-      "families": [
-        "racing"
-      ],
-      "kicker": "Racing",
-      "tagline": "The FTX 27, taken to the course.",
-      "intro": "The R is what the FTX 27 becomes when the finish comes out and the rigging goes in. Same 27-foot hull, race structure, race seating, race weight. If you already know the FTX, you know how this one behaves — only sooner.",
-      "facts": [
-        {
-          "k": "Class",
-          "v": "Racing"
-        },
-        {
-          "k": "Hull",
-          "v": "FTX 27"
-        },
-        {
-          "k": "Build",
-          "v": "All composite"
-        }
-      ],
-      "features": [
-        {
-          "t": "A known hull",
-          "p": "The FTX 27 running surface is proven in leisure use before it ever sees a course. The R inherits that behaviour rather than starting from a blank sheet."
-        },
-        {
-          "t": "Stripped, then reinforced",
-          "p": "Interior finish is removed and structure is added where competition loads demand it. Lighter overall, stiffer where it counts."
-        },
-        {
-          "t": "Race seating and restraint",
-          "p": "Crew positions, seating and restraint are specified to competition requirements."
-        }
-      ],
-      "specs": {
-        "single": [
-          {
-            "k": "Length",
-            "v": "27 ft"
-          },
-          {
-            "k": "Beam",
-            "v": "—"
-          },
-          {
-            "k": "Dry weight",
-            "v": "—"
-          },
-          {
-            "k": "Engine",
-            "v": "—"
-          },
-          {
-            "k": "Crew",
-            "v": "2"
-          },
-          {
-            "k": "Construction",
-            "v": "All composite"
-          },
-          {
-            "k": "Concept",
-            "v": "Competition"
-          },
-          {
-            "k": "Base hull",
-            "v": "FTX 27"
-          }
-        ]
-      },
-      "provisional": true,
-      "img": {
-        "hero": "assets/b5.jpg",
-        "stick": "assets/adv-1.jpg",
-        "plate": "assets/performance.jpg"
-      },
-      "related": [
-        "ftx-27",
-        "ts-model",
-        "f2-xtreme"
-      ]
-    },
-    {
-      "slug": "43-leverage",
-      "name": "43 Leverage",
+      "slug": "f3",
+      "name": "F3",
+      "racingName": "F3 Xtreme",
       "families": [
         "racing",
         "rigid"
       ],
       "kicker": "Racing · Leisure rigid",
-      "tagline": "The offshore race boat, and the largest hull we build.",
-      "intro": "At 43 feet the Leverage is the biggest thing we build, and the one with the record to prove it. Raced as Bernico–New Star in UIM Class V1 by Nico Bertels and Frank Hemelaer, she took race 1 at the 2014 Grand Prix of Italy in Terracina, race 2 at the 2014 Abu Dhabi World Championship, and won the Venezia–Rimini leg of the 2015 UIM Class V1 World Championship. The leisure trim is the same hull with the finish put back on.",
+      "tagline": "One hull, two trims — F3 for the water, F3 Xtreme for the course.",
+      "intro": "The F3 is built in two trims on a single running surface. In leisure trim it is finished for owners; as the F3 Xtreme it is stripped, restrained and set up for competition. What changes between them sits above the waterline.",
       "facts": [
         {
-          "k": "Length",
-          "v": "43 ft"
-        },
-        {
-          "k": "Class",
-          "v": "UIM V1"
+          "k": "Family",
+          "v": "F-series"
         },
         {
           "k": "Trim",
           "v": "Race / leisure"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
         }
       ],
       "features": [
         {
-          "t": "A documented race record",
-          "p": "Raced as Bernico–New Star in UIM Class V1: race 1 at Terracina 2014, race 2 at the Abu Dhabi World Championship 2014, and the Venezia–Rimini leg of the 2015 V1 World Championship."
+          "t": "Two trims, one running surface",
+          "p": "Race trim strips weight and adds restraint systems. Leisure trim adds upholstered seating, storage and finish. The performance underneath is the same."
         },
         {
-          "t": "Length that does the work",
-          "p": "Forty-three feet of waterline holds a line through sea states that make shorter hulls negotiate. Less correction from the helm, less fatigue over distance."
-        },
-        {
-          "t": "A usable 43 in leisure trim",
-          "p": "The same hull with deck, seating and storage arranged for long days aboard, without giving away the performance the length buys you."
+          "t": "Record practice",
+          "p": "A Bernico F3 Xtreme averaged 75.2 mph at Coniston Power Boat Records Week on an epoxy hull under 500 kg."
         }
       ],
       "specs": {
         "racing": [
           {
             "k": "Length",
-            "v": "43 ft"
-          },
-          {
-            "k": "Class",
-            "v": "UIM V1"
-          },
-          {
-            "k": "Team",
-            "v": "Bernico–New Star"
-          },
-          {
-            "k": "Crew",
-            "v": "2"
-          },
-          {
-            "k": "Construction",
-            "v": "All composite"
-          },
-          {
-            "k": "Builder",
-            "v": "Bernico"
-          }
-        ],
-        "leisure": [
-          {
-            "k": "Length",
-            "v": "43 ft"
+            "v": "—"
           },
           {
             "k": "Beam",
@@ -460,7 +209,33 @@
           },
           {
             "k": "Engine",
-            "v": "Twin"
+            "v": "—"
+          },
+          {
+            "k": "Crew",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ],
+        "leisure": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
           },
           {
             "k": "Capacity",
@@ -468,7 +243,438 @@
           },
           {
             "k": "Construction",
-            "v": "All composite"
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/b1.jpg",
+        "stick": "assets/performance.jpg",
+        "plate": "assets/next-3.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "f1",
+        "f2",
+        "f1ts"
+      ]
+    },
+    {
+      "slug": "ccx",
+      "name": "CCX",
+      "families": [
+        "rigid"
+      ],
+      "kicker": "Leisure · Rigid hull",
+      "tagline": "A rigid hull from the Bernico line, handcrafted in composite.",
+      "pending": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "Rigid"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/b6.jpg",
+        "stick": "assets/design.jpg",
+        "plate": "assets/y2.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "gts",
+        "ftx-s",
+        "f2"
+      ]
+    },
+    {
+      "slug": "gts",
+      "name": "GTS",
+      "families": [
+        "rigid"
+      ],
+      "kicker": "Leisure · Rigid hull",
+      "tagline": "A rigid hull from the Bernico line, handcrafted in composite.",
+      "pending": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "Rigid"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/next-side-2.jpg",
+        "stick": "assets/rev-int-1.jpg",
+        "plate": "assets/rev-int-2.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "ccx",
+        "vc35",
+        "ftx-b"
+      ]
+    },
+    {
+      "slug": "ftx-s",
+      "name": "FTX S",
+      "families": [
+        "rigid"
+      ],
+      "kicker": "Leisure · Rigid hull",
+      "tagline": "The shorter of the two FTX hulls.",
+      "pending": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "FTX"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/b5.jpg",
+        "stick": "assets/adv-1.jpg",
+        "plate": "assets/performance.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "ftx-b",
+        "ftx-33",
+        "ccx"
+      ]
+    },
+    {
+      "slug": "ftx-b",
+      "name": "FTX B",
+      "families": [
+        "rigid"
+      ],
+      "kicker": "Leisure · Rigid hull",
+      "tagline": "The larger FTX, on the same family of lines.",
+      "pending": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "FTX"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/y1.jpg",
+        "stick": "assets/b4.jpg",
+        "plate": "assets/next-side-1.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "ftx-s",
+        "ftx-33",
+        "gts"
+      ]
+    },
+    {
+      "slug": "ftx-33",
+      "name": "FTX 33",
+      "families": [
+        "rigid"
+      ],
+      "kicker": "Leisure · Rigid hull",
+      "tagline": "The next FTX. In preparation at Willebroek.",
+      "comingSoon": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "FTX"
+        },
+        {
+          "k": "Status",
+          "v": "Coming soon"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/y2.jpg",
+        "stick": "assets/design.jpg",
+        "plate": "assets/b6.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "ftx-s",
+        "ftx-b",
+        "vc35"
+      ]
+    },
+    {
+      "slug": "leverage",
+      "name": "Leverage",
+      "racingName": "P1 Racing",
+      "families": [
+        "racing",
+        "rigid"
+      ],
+      "kicker": "Racing · Leisure rigid",
+      "tagline": "The largest hull we build — and, as P1 Racing, the one we race offshore.",
+      "intro": "The Leverage is the biggest boat in the range and the one with the longest competition record. In race trim it runs as P1 Racing; in leisure trim the same hull is finished for owners who want the offshore boat without the offshore cockpit.",
+      "facts": [
+        {
+          "k": "Race name",
+          "v": "P1 Racing"
+        },
+        {
+          "k": "Trim",
+          "v": "Race / leisure"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        }
+      ],
+      "features": [
+        {
+          "t": "An offshore record",
+          "p": "Racing as Bernico–New Star in UIM Class V1 with Nico Bertels and Frank Hemelaer: winner of the Venezia–Rimini leg of the 2015 V1 World Championship, race 2 at Abu Dhabi in 2014 and race 1 at the Grand Prix of Italy, Terracina."
+        },
+        {
+          "t": "Two cockpits, one hull",
+          "p": "Race trim is stripped and restrained. Leisure trim is upholstered and stowed. The running surface does not change."
+        },
+        {
+          "t": "Built to be driven hard",
+          "p": "The structure is laid up for offshore loads first, which is what the leisure boat inherits rather than the other way round."
+        }
+      ],
+      "specs": {
+        "racing": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Crew",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ],
+        "leisure": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
           }
         ]
       },
@@ -479,53 +685,40 @@
         "plate": "assets/models/43-leverage/02.jpg"
       },
       "related": [
-        "f1-xtreme",
-        "vc-35",
-        "ftx-27"
+        "leverage-quad",
+        "f1",
+        "vc35"
       ]
     },
     {
-      "slug": "ftx-27",
-      "name": "FTX 27",
+      "slug": "leverage-quad",
+      "name": "Leverage Quad",
       "families": [
         "rigid"
       ],
       "kicker": "Leisure · Rigid hull",
-      "tagline": "Pure power and perfect control, at 27 feet.",
-      "intro": "The FTX 27 is the rigid hull most owners start with. Big enough to take weather seriously, small enough to handle on your own, and quick enough that nobody asks what else is in the range. It is also the hull behind our FTX 27 R race boat — which tells you most of what you need to know about how it runs.",
+      "tagline": "The Leverage, on four engines.",
+      "pending": true,
       "facts": [
         {
-          "k": "Length",
-          "v": "27 ft"
+          "k": "Family",
+          "v": "Leverage"
         },
         {
-          "k": "Type",
-          "v": "Rigid hull"
+          "k": "Engines",
+          "v": "Quad"
         },
         {
           "k": "Build",
           "v": "All composite"
         }
       ],
-      "features": [
-        {
-          "t": "Control before speed",
-          "p": "The FTX is fast, but what owners describe first is how settled it stays while doing it. Predictable through turns, planted on the run."
-        },
-        {
-          "t": "A deck you can move on",
-          "p": "Practical flow from boarding to helm to aft, with storage where you actually reach for it rather than where it was easiest to mould."
-        },
-        {
-          "t": "Race-proven running surface",
-          "p": "The same hull runs in competition as the FTX 27 R. Nothing about the leisure version is a softer design — only a softer fit-out."
-        }
-      ],
+      "features": [],
       "specs": {
         "single": [
           {
             "k": "Length",
-            "v": "27 ft"
+            "v": "—"
           },
           {
             "k": "Beam",
@@ -537,7 +730,7 @@
           },
           {
             "k": "Engine",
-            "v": "Single / twin outboard"
+            "v": "—"
           },
           {
             "k": "Capacity",
@@ -545,47 +738,42 @@
           },
           {
             "k": "Construction",
-            "v": "All composite"
-          },
-          {
-            "k": "Concept",
-            "v": "Rigid hull, leisure"
-          },
-          {
-            "k": "Builder",
-            "v": "Bernico"
+            "v": "—"
           }
         ]
       },
       "provisional": true,
       "img": {
-        "hero": "assets/b6.jpg",
-        "stick": "assets/design.jpg",
-        "plate": "assets/y2.jpg"
+        "hero": "assets/b7.png",
+        "stick": "assets/charter-big.jpg",
+        "plate": "assets/adv-2.jpg",
+        "placeholder": true
       },
       "related": [
-        "ftx-27-r",
-        "vc-35",
-        "f2-xtreme"
+        "leverage",
+        "vc35",
+        "f1"
       ]
     },
     {
-      "slug": "vc-35",
-      "name": "VC 35",
+      "slug": "vc35",
+      "name": "VC35",
+      "racingName": "VC35 R",
       "families": [
+        "racing",
         "rigid"
       ],
-      "kicker": "Leisure · Rigid hull",
-      "tagline": "Thirty-five feet, arranged for the whole day rather than the fast part of it.",
-      "intro": "The VC 35 is the least apologetic leisure boat we build. The extra eight feet over the FTX go into space you use — seating, shade, storage, somewhere to put people who are not currently interested in going fast. It still has the hull underneath it that makes them interested again.",
+      "kicker": "Racing · Leisure rigid",
+      "tagline": "Thirty-five feet, arranged for the whole day — or, as VC35 R, for the course.",
+      "intro": "The VC35 is the boat for owners who want the range and the space without giving up the way a Bernico runs. The VC35 R takes the same hull the other way: stripped back and set up to race.",
       "facts": [
         {
-          "k": "Length",
-          "v": "35 ft"
+          "k": "Race name",
+          "v": "VC35 R"
         },
         {
-          "k": "Type",
-          "v": "Rigid hull"
+          "k": "Trim",
+          "v": "Race / leisure"
         },
         {
           "k": "Build",
@@ -594,23 +782,19 @@
       ],
       "features": [
         {
-          "t": "Space that is actually usable",
-          "p": "Eight more feet than the FTX, spent on deck area and seating rather than on numbers in a brochure."
+          "t": "Arranged for the day",
+          "p": "Seating, shade and stowage are laid out for a full day aboard rather than for a fast hour of it."
         },
         {
-          "t": "Comfort at the helm",
-          "p": "An ergonomic helm position built for long days on the water, with the visibility and support to stay comfortable at speed."
-        },
-        {
-          "t": "Finish that lasts",
-          "p": "Premium materials and tight tolerances throughout, chosen so the boat still reads well after several seasons rather than one."
+          "t": "A race version of the same boat",
+          "p": "The VC35 R is not a different hull with a shared name. It is this boat, stripped and restrained for competition."
         }
       ],
       "specs": {
-        "single": [
+        "racing": [
           {
             "k": "Length",
-            "v": "35 ft"
+            "v": "—"
           },
           {
             "k": "Beam",
@@ -622,7 +806,33 @@
           },
           {
             "k": "Engine",
-            "v": "Twin"
+            "v": "—"
+          },
+          {
+            "k": "Crew",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ],
+        "leisure": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
           },
           {
             "k": "Capacity",
@@ -630,65 +840,189 @@
           },
           {
             "k": "Construction",
-            "v": "All composite"
-          },
-          {
-            "k": "Concept",
-            "v": "Rigid hull, leisure"
-          },
-          {
-            "k": "Builder",
-            "v": "Bernico"
+            "v": "—"
           }
         ]
       },
       "provisional": true,
       "img": {
         "hero": "assets/next-1.jpg",
-        "stick": "assets/rev-int-1.jpg",
-        "plate": "assets/rev-int-2.jpg"
+        "stick": "assets/rev-int-2.jpg",
+        "plate": "assets/y2.jpg",
+        "placeholder": true
       },
       "related": [
-        "ftx-27",
-        "43-leverage",
-        "rx10"
+        "leverage",
+        "gts",
+        "f1"
       ]
     },
     {
-      "slug": "rib-7",
-      "name": "7",
+      "slug": "f1ts",
+      "name": "F1TS",
+      "families": [
+        "racing"
+      ],
+      "kicker": "Racing",
+      "tagline": "Built for one thing.",
+      "intro": "The F1TS is a competition boat and nothing else. There is no leisure trim, no second arrangement and no concession to how often you might use it. It exists to be fast over a course.",
+      "facts": [
+        {
+          "k": "Use",
+          "v": "Competition"
+        },
+        {
+          "k": "Trim",
+          "v": "Race only"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        }
+      ],
+      "features": [
+        {
+          "t": "No leisure version",
+          "p": "Everything that does not make the boat quicker over a course has been left out."
+        }
+      ],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Crew",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/next-3.jpg",
+        "stick": "assets/performance.jpg",
+        "plate": "assets/b8.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "f3",
+        "leverage",
+        "f1-f2-circuit"
+      ]
+    },
+    {
+      "slug": "f1-f2-circuit",
+      "name": "F1 & F2 Circuit",
+      "families": [
+        "racing"
+      ],
+      "kicker": "Racing",
+      "tagline": "Circuit boats for Formula 1 and Formula 2. In preparation.",
+      "comingSoon": true,
+      "facts": [
+        {
+          "k": "Classes",
+          "v": "F1 · F2"
+        },
+        {
+          "k": "Status",
+          "v": "Coming soon"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Crew",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/aa.jpg",
+        "stick": "assets/b1.jpg",
+        "plate": "assets/performance.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "f3",
+        "f1ts",
+        "leverage"
+      ]
+    },
+    {
+      "slug": "r7",
+      "name": "R7",
       "families": [
         "rib"
       ],
       "kicker": "Leisure · RIB",
       "tagline": "Racing DNA in the world of RIBs.",
-      "intro": "Crafted with Bernico's proven hull design expertise, the 7 is where innovation meets pure excitement. Whether you're cruising coastal waters or pushing performance limits, it delivers an unparalleled experience for up to seven passengers. With options for single or dual engine configurations and constructed entirely from composite materials, it represents the pinnacle of rigid inflatable boat technology.",
+      "intro": "The R7 is the smallest boat we build and the clearest illustration of what the yard does: a racing hull, tubed and fitted out as a RIB, without the hull being softened to suit the format.",
       "facts": [
         {
           "k": "Length",
           "v": "7.46 m"
         },
         {
-          "k": "Max speed",
+          "k": "Top speed",
           "v": "120 mph"
         },
         {
-          "k": "Capacity",
+          "k": "Persons",
           "v": "7"
         }
       ],
       "features": [
         {
-          "t": "Fast and stable handling",
-          "p": "Built for confident driving, with a deep-V hull, a central steering console and a spacious driver's seat for better control."
+          "t": "A racing hull underneath",
+          "p": "The running surface comes from the competition boats, not from a RIB catalogue. That is what you feel when the water gets difficult."
         },
         {
-          "t": "Up to twin 500 HP outboards",
-          "p": "Supports high-performance outboard power, with a maximum setup of 2 × 500 HP for strong acceleration and genuine top-end speed."
-        },
-        {
-          "t": "Comfortable seating for seven",
-          "p": "Supportive seats, good legroom and a smooth ride — ideal for families, group travel and long journeys."
+          "t": "Confirmed figures",
+          "p": "7.46 m overall, 2.5 m beam, around 870 kg dry, seven persons and 150–300 litres of fuel depending on specification."
         }
       ],
       "specs": {
@@ -698,48 +1032,24 @@
             "v": "7.46 m"
           },
           {
-            "k": "Width",
+            "k": "Beam",
             "v": "2.5 m"
           },
           {
-            "k": "Weight",
+            "k": "Dry weight",
             "v": "± 870 kg"
           },
           {
-            "k": "Capacity",
-            "v": "7 persons"
-          },
-          {
-            "k": "Max speed",
+            "k": "Top speed",
             "v": "120 mph"
           },
           {
-            "k": "Engine",
-            "v": "Single / double"
+            "k": "Persons",
+            "v": "7"
           },
           {
-            "k": "Fuel capacity",
+            "k": "Fuel",
             "v": "150–300 L"
-          },
-          {
-            "k": "Fuel tank",
-            "v": "300 L"
-          },
-          {
-            "k": "Materials",
-            "v": "All composite"
-          },
-          {
-            "k": "Concept",
-            "v": "Performance RIB"
-          },
-          {
-            "k": "Design & engineering",
-            "v": "Bernico Design Team"
-          },
-          {
-            "k": "Builder",
-            "v": "Bernico"
           }
         ]
       },
@@ -747,88 +1057,65 @@
       "img": {
         "hero": "assets/r7-hero.jpg",
         "stick": "assets/r7-topview.png",
-        "plate": "assets/adv-1.jpg"
-      },
-      "video": {
-        "poster": "assets/preview.jpg",
-        "src": "assets/preview.mp4"
+        "plate": "assets/adv-1.jpg",
+        "placeholder": true
       },
       "related": [
-        "rib-7-6",
-        "rib-8",
-        "rx10"
+        "rx8",
+        "rx10",
+        "rxp-11"
       ]
     },
     {
-      "slug": "rib-7-6",
-      "name": "7.6",
+      "slug": "rx8",
+      "name": "RX8",
       "families": [
         "rib"
       ],
       "kicker": "Leisure · RIB",
-      "tagline": "Half a metre more, and it changes more than you would expect.",
-      "intro": "The 7.6 sits between the 7 and the 8, and it exists because that half metre is worth having. More tube, more deck, a little more weight to settle the ride — without moving into a size that needs a bigger berth or a bigger tow vehicle.",
+      "tagline": "The next RIB above the R7.",
+      "pending": true,
+      "render": true,
       "facts": [
         {
-          "k": "Length",
-          "v": "7.6 m"
+          "k": "Family",
+          "v": "RX"
         },
         {
-          "k": "Type",
-          "v": "RIB"
+          "k": "Imagery",
+          "v": "Render"
         },
         {
           "k": "Build",
           "v": "All composite"
         }
       ],
-      "features": [
-        {
-          "t": "The extra half metre",
-          "p": "More waterline settles the hull through chop and adds usable deck without pushing the boat into the next size class."
-        },
-        {
-          "t": "Central console layout",
-          "p": "Walk-around access on both sides, with the helm positioned for visibility standing or seated."
-        },
-        {
-          "t": "Easy boarding",
-          "p": "Practical deck flow and boarding from shore or sea — the details that decide whether a RIB gets used every weekend."
-        }
-      ],
+      "features": [],
       "specs": {
         "single": [
           {
             "k": "Length",
-            "v": "7.6 m"
-          },
-          {
-            "k": "Width",
             "v": "—"
           },
           {
-            "k": "Weight",
+            "k": "Beam",
             "v": "—"
           },
           {
-            "k": "Capacity",
+            "k": "Dry weight",
             "v": "—"
           },
           {
-            "k": "Engine",
-            "v": "Single / double"
-          },
-          {
-            "k": "Fuel tank",
+            "k": "Top speed",
             "v": "—"
           },
           {
-            "k": "Materials",
-            "v": "All composite"
+            "k": "Persons",
+            "v": "—"
           },
           {
-            "k": "Concept",
-            "v": "Leisure RIB"
+            "k": "Fuel",
+            "v": "—"
           }
         ]
       },
@@ -836,97 +1123,13 @@
       "img": {
         "hero": "assets/b4.jpg",
         "stick": "assets/b2.jpg",
-        "plate": "assets/y1.jpg"
+        "plate": "assets/y1.jpg",
+        "placeholder": true
       },
       "related": [
-        "rib-7",
-        "rib-8",
-        "rxp14"
-      ]
-    },
-    {
-      "slug": "rib-8",
-      "name": "8",
-      "families": [
-        "rib"
-      ],
-      "kicker": "Leisure · RIB",
-      "tagline": "The largest of the standard RIBs.",
-      "intro": "Eight metres is where a RIB stops being a tender and starts being the boat you take out on purpose. More deck, more range, more people — and enough hull under you to keep going when the afternoon turns.",
-      "facts": [
-        {
-          "k": "Length",
-          "v": "8 m"
-        },
-        {
-          "k": "Type",
-          "v": "RIB"
-        },
-        {
-          "k": "Build",
-          "v": "All composite"
-        }
-      ],
-      "features": [
-        {
-          "t": "Range and reserve",
-          "p": "Enough fuel and enough hull to make a long day out a decision rather than a calculation."
-        },
-        {
-          "t": "Deck arranged for numbers",
-          "p": "Seating and storage laid out for a full boat, not for a photograph of an empty one."
-        },
-        {
-          "t": "Composite construction",
-          "p": "Built in composite throughout, so the platform stays stiff and the finish holds up to hard use."
-        }
-      ],
-      "specs": {
-        "single": [
-          {
-            "k": "Length",
-            "v": "8 m"
-          },
-          {
-            "k": "Width",
-            "v": "—"
-          },
-          {
-            "k": "Weight",
-            "v": "—"
-          },
-          {
-            "k": "Capacity",
-            "v": "—"
-          },
-          {
-            "k": "Engine",
-            "v": "Single / double"
-          },
-          {
-            "k": "Fuel tank",
-            "v": "—"
-          },
-          {
-            "k": "Materials",
-            "v": "All composite"
-          },
-          {
-            "k": "Concept",
-            "v": "Leisure RIB"
-          }
-        ]
-      },
-      "provisional": true,
-      "img": {
-        "hero": "assets/b8.jpg",
-        "stick": "assets/b3.jpg",
-        "plate": "assets/next-2.jpg"
-      },
-      "related": [
-        "rib-7-6",
+        "r7",
         "rx10",
-        "rib-7"
+        "rx10-x"
       ]
     },
     {
@@ -937,33 +1140,33 @@
       ],
       "kicker": "Leisure · RIB",
       "tagline": "Dominating the waves with raw power and precision.",
-      "intro": "The RX10 is what happens when the RIB range stops being modest about it. Ten metres of composite hull built for open water and long, fast passages — the boat you choose when the crossing is the point, not the obstacle.",
+      "intro": "The RX10 is the RIB most people picture when they think of this yard. A racing running surface under a cockpit finished to a standard that has nothing to do with how RIBs are usually fitted out.",
       "facts": [
         {
-          "k": "Class",
+          "k": "Family",
           "v": "RX"
-        },
-        {
-          "k": "Hull",
-          "v": "Deep-V"
         },
         {
           "k": "Build",
           "v": "All composite"
+        },
+        {
+          "k": "Helm",
+          "v": "Forged carbon"
         }
       ],
       "features": [
         {
-          "t": "Open water first",
-          "p": "A deep-V section designed to cross rather than to pose, holding speed through the kind of sea that ends most days early."
+          "t": "A cockpit built like a racing car",
+          "p": "Forged-carbon shells on the helm and navigator seats, a carbon hardtop frame overhead and a console laid out around the driver rather than around the dashboard."
         },
         {
-          "t": "Serious power",
-          "p": "Rigged for high-output outboards, with structure and hardware specified to take the load over distance."
+          "t": "Instrumented properly",
+          "p": "Twin displays at the helm, digital throttle and shift at the right hand, and switching grouped where it can be reached without looking down."
         },
         {
-          "t": "Built to be driven far",
-          "p": "Helm ergonomics, seating and layout worked out for passages measured in hours, not minutes."
+          "t": "Finished, not trimmed",
+          "p": "Stitched upholstery, concealed lighting along the gunwale and a bench aft that folds out of the way — detail work carried through to the parts you only notice on the second look."
         }
       ],
       "specs": {
@@ -973,45 +1176,239 @@
             "v": "—"
           },
           {
-            "k": "Width",
+            "k": "Beam",
             "v": "—"
           },
           {
-            "k": "Weight",
+            "k": "Dry weight",
             "v": "—"
           },
           {
-            "k": "Capacity",
+            "k": "Top speed",
             "v": "—"
           },
           {
-            "k": "Engine",
-            "v": "Multiple outboard"
+            "k": "Persons",
+            "v": "—"
           },
           {
-            "k": "Hull",
-            "v": "Deep-V"
-          },
-          {
-            "k": "Materials",
-            "v": "All composite"
-          },
-          {
-            "k": "Concept",
-            "v": "Offshore RIB"
+            "k": "Fuel",
+            "v": "—"
           }
         ]
       },
       "provisional": true,
       "img": {
-        "hero": "assets/b2.jpg",
-        "stick": "assets/adv-2.jpg",
-        "plate": "assets/b1.jpg"
+        "hero": "assets/models/rx10/05.jpg",
+        "stick": "assets/models/rx10/01.jpg",
+        "plate": "assets/models/rx10/03.jpg"
+      },
+      "gallery": [
+        "assets/models/rx10/10.jpg",
+        "assets/models/rx10/09.jpg",
+        "assets/models/rx10/08.jpg",
+        "assets/models/rx10/04.jpg",
+        "assets/models/rx10/12.jpg",
+        "assets/models/rx10/02.jpg"
+      ],
+      "related": [
+        "rx10-x",
+        "rxp-11",
+        "r7"
+      ]
+    },
+    {
+      "slug": "rx10-x",
+      "name": "RX10 X",
+      "families": [
+        "rib"
+      ],
+      "kicker": "Leisure · RIB",
+      "tagline": "The RX10, taken further.",
+      "pending": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "RX"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Top speed",
+            "v": "—"
+          },
+          {
+            "k": "Persons",
+            "v": "—"
+          },
+          {
+            "k": "Fuel",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/models/rx10/10.jpg",
+        "stick": "assets/models/rx10/04.jpg",
+        "plate": "assets/models/rx10/12.jpg"
       },
       "related": [
+        "rx10",
+        "rxp-11",
+        "rxp13"
+      ]
+    },
+    {
+      "slug": "rxp-11",
+      "name": "RXP 11",
+      "families": [
+        "rib"
+      ],
+      "kicker": "Leisure · RIB",
+      "tagline": "The first of the RXP RIBs.",
+      "pending": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "RXP"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Top speed",
+            "v": "—"
+          },
+          {
+            "k": "Persons",
+            "v": "—"
+          },
+          {
+            "k": "Fuel",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/adv-2.jpg",
+        "stick": "assets/b3.jpg",
+        "plate": "assets/next-2.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "rxp13",
         "rxp14",
-        "rib-8",
-        "43-leverage"
+        "rx10"
+      ]
+    },
+    {
+      "slug": "rxp13",
+      "name": "RXP13",
+      "families": [
+        "rib"
+      ],
+      "kicker": "Leisure · RIB",
+      "tagline": "Thirteen metres of RXP.",
+      "pending": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "RXP"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Top speed",
+            "v": "—"
+          },
+          {
+            "k": "Persons",
+            "v": "—"
+          },
+          {
+            "k": "Fuel",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/next-side-3.jpg",
+        "stick": "assets/adv-3.jpg",
+        "plate": "assets/charter-big.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "rxp-11",
+        "rxp14",
+        "b52"
       ]
     },
     {
@@ -1022,68 +1419,52 @@
       ],
       "kicker": "Leisure · RIB",
       "tagline": "Luxury and performance without limits.",
-      "intro": "The RXP14 is the top of the RIB range and the largest thing we build on tubes. Fourteen metres, laid out with the space and finish of a rigid boat and the sea-keeping of a RIB — which is a combination almost nothing else offers.",
+      "intro": "The RXP14 is the flagship RIB — fourteen metres, laid out for distance and for people, on the same running surface philosophy as every other boat here.",
       "facts": [
         {
-          "k": "Class",
+          "k": "Family",
           "v": "RXP"
-        },
-        {
-          "k": "Length",
-          "v": "14 m"
         },
         {
           "k": "Build",
           "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
         }
       ],
       "features": [
         {
-          "t": "Rigid-boat space",
-          "p": "Fourteen metres gives you the deck area, seating and storage of a much larger rigid hull, with the forgiveness of tubes alongside it."
-        },
-        {
-          "t": "Finished, not fitted out",
-          "p": "Luxury details throughout — the level of finish owners expect from the top of a range, not from a large workboat."
-        },
-        {
-          "t": "No practical limit",
-          "p": "Rigged for the power the hull can carry, with the range and reserve to use it properly."
+          "t": "The largest RIB we build",
+          "p": "Range, accommodation and deck space at a scale the rest of the RIB range does not reach."
         }
       ],
       "specs": {
         "single": [
           {
             "k": "Length",
-            "v": "14 m"
-          },
-          {
-            "k": "Width",
             "v": "—"
           },
           {
-            "k": "Weight",
+            "k": "Beam",
             "v": "—"
           },
           {
-            "k": "Capacity",
+            "k": "Dry weight",
             "v": "—"
           },
           {
-            "k": "Engine",
-            "v": "Multiple outboard"
+            "k": "Top speed",
+            "v": "—"
           },
           {
-            "k": "Hull",
-            "v": "Deep-V"
+            "k": "Persons",
+            "v": "—"
           },
           {
-            "k": "Materials",
-            "v": "All composite"
-          },
-          {
-            "k": "Concept",
-            "v": "Flagship RIB"
+            "k": "Fuel",
+            "v": "—"
           }
         ]
       },
@@ -1091,14 +1472,389 @@
       "img": {
         "hero": "assets/adv-3.jpg",
         "stick": "assets/b3.jpg",
-        "plate": "assets/charter-big.jpg"
+        "plate": "assets/charter-big.jpg",
+        "placeholder": true
       },
       "related": [
-        "rx10",
-        "43-leverage",
-        "vc-35"
+        "rxp13",
+        "b52",
+        "rx10"
       ]
+    },
+    {
+      "slug": "b52",
+      "name": "B52",
+      "families": [
+        "rib"
+      ],
+      "kicker": "Leisure · RIB",
+      "tagline": "The B-series RIB.",
+      "pending": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "B-series"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Top speed",
+            "v": "—"
+          },
+          {
+            "k": "Persons",
+            "v": "—"
+          },
+          {
+            "k": "Fuel",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/b8.jpg",
+        "stick": "assets/b2.jpg",
+        "plate": "assets/next-2.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "b60",
+        "rxp14",
+        "rx10"
+      ]
+    },
+    {
+      "slug": "b60",
+      "name": "B60",
+      "families": [
+        "rib"
+      ],
+      "kicker": "Leisure · RIB",
+      "tagline": "The largest B-series RIB.",
+      "pending": true,
+      "render": true,
+      "facts": [
+        {
+          "k": "Family",
+          "v": "B-series"
+        },
+        {
+          "k": "Imagery",
+          "v": "Render"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Top speed",
+            "v": "—"
+          },
+          {
+            "k": "Persons",
+            "v": "—"
+          },
+          {
+            "k": "Fuel",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/mainboat.jpg",
+        "stick": "assets/boat-top.png",
+        "plate": "assets/preview.jpg",
+        "placeholder": true
+      },
+      "related": [
+        "b52",
+        "rxp14",
+        "rxp13"
+      ]
+    },
+    {
+      "slug": "ftx-27",
+      "name": "FTX 27",
+      "families": [
+        "legacy"
+      ],
+      "kicker": "Legacy model",
+      "tagline": "Pure power and perfect control, at 27 feet.",
+      "legacy": true,
+      "facts": [
+        {
+          "k": "Status",
+          "v": "Legacy"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/b6.jpg",
+        "stick": "assets/design.jpg",
+        "plate": "assets/y2.jpg",
+        "placeholder": true
+      },
+      "related": []
+    },
+    {
+      "slug": "ftx-27-r",
+      "name": "FTX 27 R",
+      "families": [
+        "legacy"
+      ],
+      "kicker": "Legacy model",
+      "tagline": "The FTX 27, taken to the course.",
+      "legacy": true,
+      "facts": [
+        {
+          "k": "Status",
+          "v": "Legacy"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/b5.jpg",
+        "stick": "assets/adv-1.jpg",
+        "plate": "assets/performance.jpg",
+        "placeholder": true
+      },
+      "related": []
+    },
+    {
+      "slug": "rib-7-6",
+      "name": "7.6",
+      "families": [
+        "legacy"
+      ],
+      "kicker": "Legacy model",
+      "tagline": "Half a metre more than the 7, and it changed more than you would expect.",
+      "legacy": true,
+      "facts": [
+        {
+          "k": "Status",
+          "v": "Legacy"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/b4.jpg",
+        "stick": "assets/b2.jpg",
+        "plate": "assets/y1.jpg",
+        "placeholder": true
+      },
+      "related": []
+    },
+    {
+      "slug": "rib-8",
+      "name": "8",
+      "families": [
+        "legacy"
+      ],
+      "kicker": "Legacy model",
+      "tagline": "The largest of the original standard RIBs.",
+      "legacy": true,
+      "facts": [
+        {
+          "k": "Status",
+          "v": "Legacy"
+        },
+        {
+          "k": "Build",
+          "v": "All composite"
+        },
+        {
+          "k": "Yard",
+          "v": "Willebroek"
+        }
+      ],
+      "features": [],
+      "specs": {
+        "single": [
+          {
+            "k": "Length",
+            "v": "—"
+          },
+          {
+            "k": "Beam",
+            "v": "—"
+          },
+          {
+            "k": "Dry weight",
+            "v": "—"
+          },
+          {
+            "k": "Engine",
+            "v": "—"
+          },
+          {
+            "k": "Capacity",
+            "v": "—"
+          },
+          {
+            "k": "Construction",
+            "v": "—"
+          }
+        ]
+      },
+      "provisional": true,
+      "img": {
+        "hero": "assets/b8.jpg",
+        "stick": "assets/b3.jpg",
+        "plate": "assets/next-2.jpg",
+        "placeholder": true
+      },
+      "related": []
     }
-  ],
-  "_rights": "assets/models/43-leverage/04.jpg came from a Facebook export in the client Drive; a sibling frame from the same shoot carried a visible (c) Raffaello Bastiani watermark and was quarantined. Clear rights before publishing."
+  ]
 }
